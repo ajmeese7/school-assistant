@@ -1,5 +1,9 @@
-*:not(#search) {
+#leftSidebar:not(#search), h1 {
     font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #leftSidebar {
