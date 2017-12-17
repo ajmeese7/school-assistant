@@ -1,4 +1,4 @@
-#School Assistant
+# School Assistant
 The ultimate school helper app.
 
 This app is currently nowhere near done. As of right now I have just a few features working and none of those actually teach students the material. I plan on working on this whenever I don't have any other projects to work on.
