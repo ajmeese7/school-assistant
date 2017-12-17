@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>School Assistant</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="ajmeese7">
+        <!-- TODO: Download for offline use; find better font? -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:700">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="jquery-3.2.1.min.js"></script>
+        <!-- Sidebar scripts -->
+            <script src="functions/prime.js"></script>
+            <script src="functions/exponents.js"></script>
+            <script src="functions/sumOfDigits.js"></script>
+        <!-- END sidebar scripts -->
+        <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"><!-- TODO: REMOVE! --></script>
+            <!-- To save me the hassle of having to convert to separate strings for very large numbers. -->
+    </head>
+    <body>
+        <div id="leftSidebar">
+            <!-- TODO: When the 'x' button is clicked, update sidebar to display all functions -->
+            <input type="search" id="search" onkeyup="searchFunctions()" placeholder="Search functions here">
+            <ul id="functionList">
+                <!-- TODO: Have install options like Foundation that dynamically adds the below things and imports the material -->
+                <li id="toggle" class="hidden">
+                    <a>Chemistry</a>
+                    <ul id="subsection">
+                        <a>Lewis Dot Structure
+                        <span class="tag">Elements</span>
+                      </a>
+                    </ul>
+
+                    <a>Mathematics</a>
+                    <ul id="subsection">
+                        <a>Conic Sections
+                        <span class="tag">Calculus</span>
+                        </a>
+
+                        <a>Pascal Triangle
+                        <span class="tag">Algebra II</span>
+                        </a>
+
+                        <a id="isPrime" onclick="primeSetup()">Prime Number
+                        <span class="tag">Euler</span>
+                        </a>
+
+                        <a>Sum Of Digits
+                        <span class="tag">Euler</span>
+                        </a>
+                    </ul>
+
+                    <!--<a>English</a>
+                    <ul id="subsection">
+
+                    </ul>-->
+                </li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <!-- TODO: When the a is clicked, dynamicContent is set to display the started page (.innerHTML) -->
+            <h1><a id="mainPage">The Ultimate School Assistant</a></h1>
+            <div id="dynamicContent">
+
+            </div>
+        </div>
+
+        <script src="programFunctions.js"></script>
+    </body>
+</html>

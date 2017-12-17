@@ -1,0 +1,64 @@
+*:not(#search) {
+    font-family: 'Raleway', sans-serif;
+}
+
+#leftSidebar {
+    width: 17.5%;
+    float: left;
+}
+
+#main {
+    /* TODO: Breakpoint for this working is 1016px. Fix it! */
+    width: 80%;
+    float: right;
+    margin-left: 25px;
+}
+
+.tag {
+    display: none;
+}
+
+#search {
+    background-image: url('searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#functionList {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#functionList li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+}
+
+#functionList li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+.hidden ul {
+    display: none;
+}
+.active ul {
+    display: block;
+}
+
+h1 {
+    margin: 0;
+}
