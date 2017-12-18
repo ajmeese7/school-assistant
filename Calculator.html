@@ -9,8 +9,9 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="jquery-3.2.1.min.js"></script>
         <!-- Sidebar scripts -->
-            <script src="functions/prime.js"></script>
             <script src="functions/exponents.js"></script>
+            <script src="functions/factorization.js"></script>
+            <script src="functions/prime.js"></script>
             <script src="functions/sumOfDigits.js"></script>
         <!-- END sidebar scripts -->
         <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"><!-- TODO: DO MYSELF AND REMOVE! --></script>
@@ -39,6 +40,11 @@
                     <ul id="subsection">
                         <a>Conic Sections
                         <span class="tag">Calculus</span>
+                        </a>
+
+                        <!-- TODO: Add link to prime -->
+                        <a id="factorization" onclick="factorizationSetup()">Factorization
+                        <span class="tag">Factors</span>
                         </a>
 
                         <a>Pascal Triangle
