@@ -9,26 +9,30 @@ function sumOfDigitsSetup() {
 };
 
 
-// Currently outputs to the side. TODO: Replace so it is only displayed once!
 function sumOfDigits(number, power) {
-  // TODO: Don't display any 'powered' if one is not entered?
-    if (!power) {
-      power = 1;
+    if ($("#numberPowered").length == 0) {
+        dynamicContent.innerHTML += "<p id=numberPowered></p>"
     }
 
-    dynamicContent.innerHTML += "<p id=numberPowered>"
     numberPowered = document.getElementById("numberPowered");
+    if (power) {
+        var powered = bigInt("" + number).pow("" + power);
+        powered = powered.toString();
+        numberPowered.innerHTML = "Powered: " + powered;
+    } else {
+        var powered = number;
+        numberPowered.innerHTML = "";
+    }
 
-    var powered = bigInt("" + number).pow("" + power);
-    powered = powered.toString();
-    numberPowered.innerHTML += "Powered: " + powered + "</p>";
+    if ($("#answer").length == 0) {
+        dynamicContent.innerHTML += "<p id=answer></p>"
+    }
 
-    dynamicContent.innerHTML += "<p id=answer>";
     answer = document.getElementById("answer");
     var sum = 0;
     for (i = powered.length - 1; i >= 0; i--) {
         sum += parseInt(powered.charAt(i));
     }
 
-    answer.innerHTML += "Sum: " + sum + "</p>";
+    answer.innerHTML = "Sum: " + sum;
 }
