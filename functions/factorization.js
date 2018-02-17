@@ -8,7 +8,7 @@ function factorizationSetup() {
     );
 };
 
-
+// TODO: Add validation for number-only input!
 function getFactors(number) {
     if ($("#factors").length == 0) {
         dynamicContent.innerHTML += "<p id=factors></p>"

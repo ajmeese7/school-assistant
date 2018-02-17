@@ -8,13 +8,13 @@ function sumOfDigitsSetup() {
     );
 };
 
-
+// TODO: Add validation for number-only input!
 function sumOfDigits(number, power) {
     if ($("#numberPowered").length == 0) {
         dynamicContent.innerHTML += "<p id=numberPowered></p>"
     }
 
-    numberPowered = document.getElementById("numberPowered");
+    var numberPowered = document.getElementById("numberPowered");
     if (power) {
         var powered = bigInt("" + number).pow("" + power);
         powered = powered.toString();

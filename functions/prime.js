@@ -7,7 +7,7 @@ function primeSetup() {
     );
 };
 
-
+// TODO: Add validation for number-only input!
 // It currently only runs once. TODO: FIX!!!
 function isPrime(number) {
     // TODO: Edit so number can be a bigInteger; IMPORT!
