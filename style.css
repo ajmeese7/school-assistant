@@ -12,10 +12,8 @@ p {
 }
 
 #main {
-    /* TODO: Breakpoint for this working is 1016px. Fix it! */
     width: 80%;
     float: right;
-    margin-left: 25px;
 }
 
 .tag {
