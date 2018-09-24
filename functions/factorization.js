@@ -42,7 +42,7 @@ function getFactors(number) {
         }
     } else {
         if (number == 0) {
-            factors.innerHTML = number + " is divisible by everything.";
+            factors.innerHTML = "0 is divisible by everything.";
         } else {
             factors.innerHTML = number + " is prime.";
         }

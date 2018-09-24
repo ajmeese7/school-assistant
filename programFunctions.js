@@ -1,3 +1,4 @@
+// Searches through the available function names and only displays the ones applicable
 function searchFunctions() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("search");
@@ -16,33 +17,16 @@ function searchFunctions() {
     }
 }
 
-$("#toggle").click(function(event) {
-    // TODO: Make a second subsection work properly.
-    // TODO: Make only the clicked subsection appear
-    var element = $(event.target);
-    var parentID = $(element).parent().attr("id");
-    var className = toggle.getAttribute("class");
+// Toggles the subject menu when the header is clicked
+$(".subsection").click(function(event) {
+    var element = $(this);
+    var child = element.next("ul");
+    console.log(child);
+    var className = child.attr("class");
 
-    // The second part prevents sub-items from toggling the list
-    if (className == "active" && parentID != "subsection") {
-        toggle.className = "hidden";
-
-        removeEmptyATag();
+    if (className == "active") {
+        child.attr("class", "hidden");
     } else {
-        toggle.className = "active";
+        child.attr("class", "active");
     }
 });
-
-// Only removes the first child the first time
-var removeEmptyATag = (function() {
-    var executed = false;
-    return function() {
-        if (!executed) {
-            executed = true;
-            var subsection = document.getElementById("subsection");
-            //var empty = subsection.childNodes[0];
-            subsection.removeChild(subsection.childNodes[0]);
-            //empty.removeChild(empty.childNodes[0]);
-        }
-    };
-})();

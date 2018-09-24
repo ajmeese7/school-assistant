@@ -3,7 +3,7 @@
 }
 
 p {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
 }
 
 #leftSidebar {
@@ -37,6 +37,13 @@ p {
     padding: 0;
     margin: 0;
 }
+/* Turns off highlighting for sidebar because it gets annoying */
+#functionList::-moz-selection,
+#functionList::selection {
+    /* TODO: Get this to work properly */
+    background-color: transparent;
+    color: #000;
+}
 
 #functionList li a {
     border: 1px solid #ddd;
@@ -54,10 +61,10 @@ p {
 }
 
 
-.hidden ul {
+.hidden {
     display: none;
 }
-.active ul {
+.active {
     display: block;
 }
 
