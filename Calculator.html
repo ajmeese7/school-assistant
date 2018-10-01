@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="jquery-3.2.1.min.js"></script>
         <!-- Sidebar scripts -->
+            <script src="functions/derivative.js"></script>
             <script src="functions/factorization.js"></script>
             <script src="functions/triangle.js"></script>
             <script src="functions/prime.js"></script>
@@ -26,40 +27,47 @@
                 <li>
                     <a class="subsection">Chemistry</a>
                     <ul class="hidden">
-                        <a>Lewis Dot Structure
+                        <!-- Class "func" indicates that this is a searchable function -->
+                        <a class="func">Lewis Dot Structure
+                        <!-- Class "tag" is searchable, but isn't displayed -->
                         <span class="tag">Elements</span>
                         </a>
 
                         <!-- USE http://www.kentchemistry.com/links/AtomicStructure/waveequations.htm -->
-                        <a>Significant Figures
+                        <a class="func">Significant Figures
                         <span class="tag">Sig Figs</span>
                         </a>
                     </ul>
 
                     <a class="subsection">Mathematics</a>
                     <ul class="hidden">
-                        <a>Conic Sections
+                        <a class="func">Conic Sections
+                        <span class="tag">Calculus</span>
+                        </a>
+
+                        <a class="func" onclick="derivativeSetup()">Derivatives
                         <span class="tag">Calculus</span>
                         </a>
 
                         <!-- TODO: Add link to prime -->
-                        <a id="factorization" onclick="factorizationSetup()">Factorization
+                        <a class="func" id="factorization" onclick="factorizationSetup()">Factorization
                         <span class="tag">Factors</span>
                         </a>
 
-                        <a>Pascal Triangle
+                        <a class="func">Pascal Triangle
                         <span class="tag">Algebra II</span>
                         </a>
 
-                        <a onclick="triangle()">Triangles
+                        <a class="func" onclick="triangle()">Triangles
                         <span class="tag">Sides, Area, Classification, Type</span>
                         </a>
 
-                        <a id="isPrime" onclick="primeSetup()">Prime Number
+                        <!-- TODO: Is there a reason that the completed ones have an ID? -->
+                        <a class="func" id="isPrime" onclick="primeSetup()">Prime Number
                         <span class="tag">Euler</span>
                         </a>
 
-                        <a id="sumOfDigits" onclick="sumOfDigitsSetup()">Sum Of Digits
+                        <a class="func" id="sumOfDigits" onclick="sumOfDigitsSetup()">Sum Of Digits
                         <span class="tag">Euler</span>
                         </a>
                     </ul>
