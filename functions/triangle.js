@@ -27,9 +27,9 @@ function sideValidation(a, b, c) {
   sideArray.sort((a, b) => (a - b));
 
   // Sides from smallest to largest
-  var a = sideArray[0];
-  var b = sideArray[1];
-  var c = sideArray[2];
+  var a = Number(sideArray[0]);
+  var b = Number(sideArray[1]);
+  var c = Number(sideArray[2]);
 
   // Makes sure all input fields are filled out
   if (a && b && c) {
@@ -38,7 +38,7 @@ function sideValidation(a, b, c) {
     } else if (a * b * c == 0) {
       // TODO: Improve this message?
       return "A triangle cannot have an area of 0.";
-    } else if (a + b < c) {
+    } else if ((a + b) < c) {
         return "Side lengths " + a + ", " + b + ", and " + c + " do NOT form a triangle.";
     } else {
       return triangleClassification(a, b, c);
