@@ -36,7 +36,7 @@ function sideValidation(a, b, c) {
     if (a < 0) {
       return "Only positive side lengths are allowed.";
     } else if (a * b * c == 0) {
-      // TODO: Improve this message?
+      // Makes sure no side lengths are equal to zero
       return "A triangle cannot have an area of 0.";
     } else if ((a + b) < c) {
         return "Side lengths " + a + ", " + b + ", and " + c + " do NOT form a triangle.";
